@@ -1,11 +1,17 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ListaPostComponent } from './services/lista-post.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule, ListaPostComponent, ListaPostComponent], // Importe seu componente aqui
+  template: `
+    <main>
+  <app-lista-post></app-lista-post>
+    </main>
+  `,
 })
 export class AppComponent {
   title = 'projetoAng';

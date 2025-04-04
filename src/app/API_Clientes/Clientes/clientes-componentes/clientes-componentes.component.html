@@ -1,1 +1,5 @@
-<p>clientes-componentes works!</p>
+<form (ngSubmit)="onSubmit()">
+  <input [(ngModel)]="cliente.nome" placeholder="Nome" required>
+  <input [(ngModel)]="cliente.telefone" placeholder="Telefone" required>
+  <button type="submit">Cadastrar</button>
+</form>
