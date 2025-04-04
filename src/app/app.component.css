@@ -28,3 +28,7 @@ button {
   margin-bottom: 10px;
   border-radius: 4px;
 }
+
+.debug-area {
+  opacity: 0;
+}
