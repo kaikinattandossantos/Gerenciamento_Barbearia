@@ -11,7 +11,8 @@ export interface Post {
 
 @Injectable({ providedIn: 'root' })
 export class PostService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/post';
+  private apiUrl = 'http://localhost:8080/usuarios';
+  
 
   constructor(private http: HttpClient) { }
 
