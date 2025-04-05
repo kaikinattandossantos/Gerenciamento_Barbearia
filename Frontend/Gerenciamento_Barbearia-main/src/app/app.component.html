@@ -1,0 +1,24 @@
+
+<div class="container">
+  <h2>Gerenciamento de Posts</h2>
+
+  <div class="form-container">
+    <input [(ngModel)]="postAtual.titulo" placeholder="Título">
+    <textarea [(ngModel)]="postAtual.conteudo" placeholder="Conteúdo"></textarea>
+    <button (click)="salvarPost()">{{ editando ? 'Atualizar' : 'Adicionar' }}</button>
+    <button *ngIf="editando" (click)="cancelarEdicao()">Cancelar</button>
+  </div>
+
+  <div class="posts-container">
+    <div *ngFor="let post of posts" class="post-card">
+      <h3>{{ post.titulo }}</h3>
+      <p>{{ post.conteudo }}</p>
+      <button (click)="editarPost(post)">Editar</button>
+      <button (click)="removerPost(post)">Excluir</button>
+    </div>
+  </div>
+</div>
+
+<div class="debug-area">
+  <pre>{{ posts | json }}</pre>
+</div>
